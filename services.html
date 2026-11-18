@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">خدماتنا ومنتجاتنا - رؤية الشرق للحلول التقنية والاتصالات</title>
+    <title id="page-title">رؤية الشرق - للحلول التقنية والاتصالات</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
@@ -20,15 +20,14 @@
             <!-- Logo Section -->
             <div class="flex items-center space-x-3 space-x-reverse">
                 <a href="index.html" class="flex items-center">
-                    <!-- استبدل logo.png برابط أو مسار صورة اللوجو الخاص بك -->
                     <img src="logo.png" alt="رؤية الشرق" class="h-10 md:h-12 w-auto object-contain">
                 </a>
             </div>
 
             <!-- Navigation Links -->
             <nav class="hidden md:flex space-x-6 space-x-reverse font-semibold">
-                <a href="index.html" class="text-gray-600 hover:text-blue-900 transition" data-i18n="nav_home">الرئيسية</a>
-                <a href="services.html" class="text-blue-900 border-b-2 border-blue-900 pb-1" data-i18n="nav_services">خدماتنا والمنتجات</a>
+                <a href="index.html" class="text-blue-900 border-b-2 border-blue-900 pb-1" data-i18n="nav_home">الرئيسية</a>
+                <a href="services.html" class="text-gray-600 hover:text-blue-900 transition" data-i18n="nav_services">خدماتنا والمنتجات</a>
                 <a href="about.html" class="text-gray-600 hover:text-blue-900 transition" data-i18n="nav_about">من نحن</a>
             </nav>
 
@@ -43,93 +42,47 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="max-w-7xl mx-auto px-4 py-12">
-        
-        <!-- Section Header -->
-        <div class="text-center mb-16">
-            <h1 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4" data-i18n="main_title">خدماتنا ومنتجاتنا الاحترافية</h1>
-            <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="main_desc">نلبي احتياجات الشركات والأفراد بأحدث حلول التقنية والاتصالات، الجوالات، وشرائح البيانات المعتمدة في المملكة.</p>
-        </div>
-
-        <!-- Section 1: Enterprise & Core IT Services -->
-        <div class="mb-16">
-            <h2 class="text-2xl font-bold text-gray-900 mb-8 border-r-4 border-blue-900 pr-3" data-i18n="sec1_heading">البنية التحتية والحلول التقنية</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-                    <h3 class="text-xl font-bold text-blue-900 mb-2" data-i18n="sec1_item1_title">شبكات الألياف البصرية</h3>
-                    <p class="text-gray-600 text-sm" data-i18n="sec1_item1_desc">تصميم وتنفيذ شبكات الألياف البصرية المتقدمة والبنية التحتية للشبكات المحلية ومراكز البيانات.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-                    <h3 class="text-xl font-bold text-blue-900 mb-2" data-i18n="sec1_item2_title">أمن الشبكات والجدار الناري</h3>
-                    <p class="text-gray-600 text-sm" data-i18n="sec1_item2_desc">حماية الأصول الرقمية للشركات عبر أنظمة جدران الحماية المتقدمة وإدارة أمن المعلومات.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-                    <h3 class="text-xl font-bold text-blue-900 mb-2" data-i18n="sec1_item3_title">أنظمة الاتصالات السحابية</h3>
-                    <p class="text-gray-600 text-sm" data-i18n="sec1_item3_desc">ربط فروع الشركات وأنظمتهم الصوتية والمرئية بكفاءة عالية عبر الحوسبة السحابية.</p>
-                </div>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="hero_title">رؤية الشرق للحلول التقنية والاتصالات</h1>
+            <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-8" data-i18n="hero_desc">شريكك الأمثل في البنية التحتية للشبكات، أمن المعلومات، توفير الجوالات الذكية، وشرائح البيانات المعتمدة في المملكة.</p>
+            <div class="flex justify-center space-x-4 space-x-reverse">
+                <a href="services.html" class="bg-white text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition shadow-lg" data-i18n="hero_btn_services">استعرض خدماتنا</a>
+                <a href="contact.html" class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-900 transition" data-i18n="hero_btn_contact">تواصل معنا</a>
             </div>
         </div>
+    </section>
 
-        <!-- Section 2: Mobile Devices by Brands -->
-        <div class="mb-16">
-            <h2 class="text-2xl font-bold text-gray-900 mb-8 border-r-4 border-blue-900 pr-3" data-i18n="sec2_heading">منتجات الجوالات الذكية (حسب البراندات)</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Apple -->
-                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center">
-                    <div class="bg-gray-100 text-blue-900 font-bold py-2 rounded-lg mb-4">Apple iPhone</div>
-                    <p class="text-gray-600 text-sm mb-4" data-i18n="sec2_apple_desc">أحدث إصدارات أيفون الأصلية بضمان معتمد وتوفير خاص لقطاع الأعمال والأفراد.</p>
-                    <span class="inline-block bg-blue-50 text-blue-900 text-xs px-3 py-1 rounded-full font-semibold" data-i18n="badge_available">متوفر الآن</span>
-                </div>
-                <!-- Samsung -->
-                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center">
-                    <div class="bg-gray-100 text-blue-900 font-bold py-2 rounded-lg mb-4">Samsung Galaxy</div>
-                    <p class="text-gray-600 text-sm mb-4" data-i18n="sec2_samsung_desc">سلسلة الهواتف الذكية الرائدة Galaxy S و Z و A بخيارات متعددة تلائم الشركات.</p>
-                    <span class="inline-block bg-blue-50 text-blue-900 text-xs px-3 py-1 rounded-full font-semibold" data-i18n="badge_available">متوفر الآن</span>
-                </div>
-                <!-- Xiaomi & Others -->
-                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center">
-                    <div class="bg-gray-100 text-blue-900 font-bold py-2 rounded-lg mb-4">Xiaomi & More</div>
-                    <p class="text-gray-600 text-sm mb-4" data-i18n="sec2_xiaomi_desc">أجهزة ذكية اقتصادية وعالية الأداء تلبي كافة الاستخدامات الاحترافية والشخصية.</p>
-                    <span class="inline-block bg-blue-50 text-blue-900 text-xs px-3 py-1 rounded-full font-semibold" data-i18n="badge_available">متوفر الآن</span>
-                </div>
-            </div>
+    <!-- Quick Services Preview -->
+    <main class="max-w-7xl mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-blue-900 mb-3" data-i18n="sec_title">ماذا نقدم؟</h2>
+            <p class="text-gray-600" data-i18n="sec_desc">نقدم حلولاً متكاملة للقطاعين المؤسسي والفردي بأعلى معايير الجودة.</p>
         </div>
 
-        <!-- Section 3: Telecom & Data SIM Cards in KSA -->
-        <div class="mb-16">
-            <h2 class="text-2xl font-bold text-gray-900 mb-8 border-r-4 border-blue-900 pr-3" data-i18n="sec3_heading">شرائح الاتصالات والبيانات في المملكة</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- STC -->
-                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-purple-600">
-                    <h3 class="text-xl font-bold text-purple-800 mb-2">STC (اتصالات السعودية)</h3>
-                    <p class="text-gray-600 text-sm mb-4" data-i18n="sec3_stc_desc">باقات الإنترنت السريع وشرائح البيانات المفتوحة وخطوط الأعمال المخصصة للشركات.</p>
-                    <ul class="text-xs text-gray-500 space-y-1">
-                        <li data-i18n="sec3_stc_li1">✓ شرائح بيانات 5G</li>
-                        <li data-i18n="sec3_stc_li2">✓ باقات أعمال مخصصة</li>
-                    </ul>
-                </div>
-                <!-- Mobily -->
-                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-orange-500">
-                    <h3 class="text-xl font-bold text-orange-600 mb-2">Mobily (موبايلي)</h3>
-                    <p class="text-gray-600 text-sm mb-4" data-i18n="sec3_mobily_desc">عروض مميزة لشرائح الصوت والبيانات، وحلول الربط المتكاملة للأجهزة والإنترنت المنزلي.</p>
-                    <ul class="text-xs text-gray-500 space-y-1">
-                        <li data-i18n="sec3_mobily_li1">✓ باقات مفوتر ومسبق الدفع</li>
-                        <li data-i18n="sec3_mobily_li2">✓ تغطية فائقة السرعة</li>
-                    </ul>
-                </div>
-                <!-- Zain -->
-                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-600">
-                    <h3 class="text-xl font-bold text-blue-600 mb-2">Zain (زين السعودية)</h3>
-                    <p class="text-gray-600 text-sm mb-4" data-i18n="sec3_zain_desc">باقات بيانات تنافسية، خطوط صوتية، وحلول اتصال مرنة تناسب الأفراد والشركات الناشئة.</p>
-                    <ul class="text-xs text-gray-500 space-y-1">
-                        <li data-i18n="sec3_zain_li1">✓ عروض إنترنت بلا حدود</li>
-                        <li data-i18n="sec3_zain_li2">✓ أسعار تنافسية للأعمال</li>
-                    </ul>
-                </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center">
+                <div class="text-blue-900 text-3xl mb-4 font-bold">🌐</div>
+                <h3 class="text-xl font-bold text-blue-900 mb-2" data-i18n="card1_title">البنية التحتية والشبكات</h3>
+                <p class="text-gray-600 text-sm mb-4" data-i18n="card1_desc">شبكات الألياف البصرية وأنظمة الجدران النارية وأمن المعلومات.</p>
+                <a href="services.html" class="text-blue-900 font-semibold text-sm hover:underline" data-i18n="read_more">المزيد ←</a>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center">
+                <div class="text-blue-900 text-3xl mb-4 font-bold">📱</div>
+                <h3 class="text-xl font-bold text-blue-900 mb-2" data-i18n="card2_title">الجوالات الذكية</h3>
+                <p class="text-gray-600 text-sm mb-4" data-i18n="card2_desc">أحدث إصدارات أيفون، سامسونج، وشاومي بضمان معتمد.</p>
+                <a href="services.html" class="text-blue-900 font-semibold text-sm hover:underline" data-i18n="read_more">المزيد ←</a>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center">
+                <div class="text-blue-900 text-3xl mb-4 font-bold">📶</div>
+                <h3 class="text-xl font-bold text-blue-900 mb-2" data-i18n="card3_title">شرائح الاتصالات والبيانات</h3>
+                <p class="text-gray-600 text-sm mb-4" data-i18n="card3_desc">باقات STC، موبايلي، وزين للأعمال والأفراد في المملكة.</p>
+                <a href="services.html" class="text-blue-900 font-semibold text-sm hover:underline" data-i18n="read_more">المزيد ←</a>
             </div>
         </div>
-
     </main>
 
     <!-- Footer -->
@@ -144,67 +97,45 @@
     <script>
         const translations = {
             ar: {
-                page_title: "خدماتنا ومنتجاتنا - رؤية الشرق للحلول التقنية والاتصالات",
+                page_title: "رؤية الشرق - للحلول التقنية والاتصالات",
                 nav_home: "الرئيسية",
                 nav_services: "خدماتنا والمنتجات",
                 nav_about: "من نحن",
                 nav_contact: "تواصل معنا",
-                main_title: "خدماتنا ومنتجاتنا الاحترافية",
-                main_desc: "نلبي احتياجات الشركات والأفراد بأحدث حلول التقنية والاتصالات، الجوالات، وشرائح البيانات المعتمدة في المملكة.",
-                sec1_heading: "البنية التحتية والحلول التقنية",
-                sec1_item1_title: "شبكات الألياف البصرية",
-                sec1_item1_desc: "تصميم وتنفيذ شبكات الألياف البصرية المتقدمة والبنية التحتية للشبكات المحلية ومراكز البيانات.",
-                sec1_item2_title: "أمن الشبكات والجدار الناري",
-                sec1_item2_desc: "حماية الأصول الرقمية للشركات عبر أنظمة جدران الحماية المتقدمة وإدارة أمن المعلومات.",
-                sec1_item3_title: "أنظمة الاتصالات السحابية",
-                sec1_item3_desc: "ربط فروع الشركات وأنظمتهم الصوتية والمرئية بكفاءة عالية عبر الحوسبة السحابية.",
-                sec2_heading: "منتجات الجوالات الذكية (حسب البراندات)",
-                sec2_apple_desc: "أحدث إصدارات أيفون الأصلية بضمان معتمد وتوفير خاص لقطاع الأعمال والأفراد.",
-                sec2_samsung_desc: "سلسلة الهواتف الذكية الرائدة Galaxy S و Z و A بخيارات متعددة تلائم الشركات.",
-                sec2_xiaomi_desc: "أجهزة ذكية اقتصادية وعالية الأداء تلبي كافة الاستخدامات الاحترافية والشخصية.",
-                badge_available: "متوفر الآن",
-                sec3_heading: "شرائح الاتصالات والبيانات في المملكة",
-                sec3_stc_desc: "باقات الإنترنت السريع وشرائح البيانات المفتوحة وخطوط الأعمال المخصصة للشركات.",
-                sec3_stc_li1: "✓ شرائح بيانات 5G",
-                sec3_stc_li2: "✓ باقات أعمال مخصصة",
-                sec3_mobily_desc: "عروض مميزة لشرائح الصوت والبيانات، وحلول الربط المتكاملة للأجهزة والإنترنت المنزلي.",
-                sec3_mobily_li1: "✓ باقات مفوتر ومسبق الدفع",
-                sec3_mobily_li2: "✓ تغطية فائقة السرعة",
-                sec3_zain_desc: "باقات بيانات تنافسية، خطوط صوتية، وحلول اتصال مرنة تناسب الأفراد والشركات الناشئة.",
-                sec3_zain_li1: "✓ عروض إنترنت بلا حدود",
-                sec3_zain_li2: "✓ أسعار تنافسية للأعمال",
+                hero_title: "رؤية الشرق للحلول التقنية والاتصالات",
+                hero_desc: "شريكك الأمثل في البنية التحتية للشبكات، أمن المعلومات، توفير الجوالات الذكية، وشرائح البيانات المعتمدة في المملكة.",
+                hero_btn_services: "استعرض خدماتنا",
+                hero_btn_contact: "تواصل معنا",
+                sec_title: "ماذا نقدم؟",
+                sec_desc: "نقدم حلولاً متكاملة للقطاعين المؤسسي والفردي بأعلى معايير الجودة.",
+                card1_title: "البنية التحتية والشبكات",
+                card1_desc: "شبكات الألياف البصرية وأنظمة الجدران النارية وأمن المعلومات.",
+                card2_title: "الجوالات الذكية",
+                card2_desc: "أحدث إصدارات أيفون، سامسونج، وشاومي بضمان معتمد.",
+                card3_title: "شرائح الاتصالات والبيانات",
+                card3_desc: "باقات STC، موبايلي، وزين للأعمال والأفراد في المملكة.",
+                read_more: "المزيد ←",
                 footer_rights: "جميع حقوق الطبع والنشر محفوظة © 2026 - رؤية الشرق للحلول التقنية والاتصالات"
             },
             en: {
-                page_title: "Our Services & Products - Ruyat Alsharq Tech & Telecom",
+                page_title: "Ruyat Alsharq - Technical & Telecommunication Solutions",
                 nav_home: "Home",
                 nav_services: "Services & Products",
                 nav_about: "About Us",
                 nav_contact: "Contact Us",
-                main_title: "Our Professional Services & Products",
-                main_desc: "Meeting corporate and individual needs with the latest tech solutions, smartphones, and certified data SIM cards in KSA.",
-                sec1_heading: "Infrastructure & Technical Solutions",
-                sec1_item1_title: "Fiber Optic Networks",
-                sec1_item1_desc: "Design and implementation of advanced fiber optic networks, local network infrastructure, and data centers.",
-                sec1_item2_title: "Network Security & Firewall",
-                sec1_item2_desc: "Protecting corporate digital assets through advanced firewall systems and information security management.",
-                sec1_item3_title: "Cloud Communication Systems",
-                sec1_item3_desc: "Connecting company branches and their voice/video systems efficiently via cloud computing.",
-                sec2_heading: "Smart Mobile Devices (By Brands)",
-                sec2_apple_desc: "Latest original iPhone models with certified warranty and special provisions for businesses and individuals.",
-                sec2_samsung_desc: "Flagship Galaxy S, Z, and A smartphone series with multiple options tailored for businesses.",
-                sec2_xiaomi_desc: "Economical and high-performance smart devices catering to all professional and personal uses.",
-                badge_available: "Available Now",
-                sec3_heading: "Telecom & Data SIM Cards in KSA",
-                sec3_stc_desc: "High-speed internet packages, open data SIMs, and dedicated corporate business lines.",
-                sec3_stc_li1: "✓ 5G Data SIMs",
-                sec3_stc_li2: "✓ Dedicated Business Plans",
-                sec3_mobily_desc: "Special offers for voice and data SIMs, and integrated connectivity solutions for devices and home internet.",
-                sec3_mobily_li1: "✓ Postpaid & Prepaid Plans",
-                sec3_mobily_li2: "✓ Ultra-Fast Coverage",
-                sec3_zain_desc: "Competitive data packages, voice lines, and flexible communication solutions for individuals and startups.",
-                sec3_zain_li1: "✓ Unlimited Internet Offers",
-                sec3_zain_li2: "✓ Competitive Business Pricing",
+                hero_title: "Ruyat Alsharq Technical & Telecom Solutions",
+                hero_desc: "Your ideal partner in network infrastructure, information security, smart mobile devices, and certified data SIM cards in KSA.",
+                hero_btn_services: "Explore Services",
+                hero_btn_contact: "Contact Us",
+                sec_title: "What We Offer",
+                sec_desc: "We provide integrated solutions for both corporate and individual sectors with the highest quality standards.",
+                card1_title: "Infrastructure & Networks",
+                card1_desc: "Fiber optic networks, firewall systems, and information security.",
+                card2_title: "Smart Mobile Devices",
+                card2_desc: "Latest iPhone, Samsung, and Xiaomi releases with certified warranty.",
+                card3_title: "Telecom & Data SIMs",
+                card3_desc: "STC, Mobily, and Zain business and individual packages in KSA.",
+                read_more: "Read More →",
                 footer_rights: "All Rights Reserved © 2026 - Ruyat Alsharq Technical & Telecommunication Solutions"
             }
         };
