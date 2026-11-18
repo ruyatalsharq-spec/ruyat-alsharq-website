@@ -15,12 +15,16 @@
 
     <!-- Header / Navbar -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-2.5 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             
-            <!-- Logo Section (Optimized Size) -->
+            <!-- Professional Text Logo (Replaces ugly image background) -->
             <div class="flex items-center space-x-3 space-x-reverse">
-                <a href="index.html" class="flex items-center">
-                    <img src="logo.png" alt="رؤية الشرق المستدامة" class="h-9 md:h-11 w-auto object-contain max-w-[150px]">
+                <a href="index.html" class="flex items-center space-x-2 space-x-reverse">
+                    <div class="bg-blue-900 text-white font-bold text-lg w-10 h-10 rounded-xl flex items-center justify-center shadow-md">ر</div>
+                    <div>
+                        <span class="font-bold text-blue-900 text-base md:text-lg block leading-tight" data-i18n="logo_main">رؤية الشرق المستدامة</span>
+                        <span class="text-xs text-gray-500 block" data-i18n="logo_sub">للحلول التقنية والاتصالات</span>
+                    </div>
                 </a>
             </div>
 
@@ -121,6 +125,8 @@
         const translations = {
             ar: {
                 page_title: "شركة رؤية الشرق المستدامة - للحلول التقنية والاتصالات",
+                logo_main: "رؤية الشرق المستدامة",
+                logo_sub: "للحلول التقنية والاتصالات",
                 nav_home: "الرئيسية",
                 nav_services: "خدماتنا والمنتجات",
                 nav_about: "من نحن",
@@ -150,6 +156,8 @@
             },
             en: {
                 page_title: "Ruyat Alsharq Almustadamah - Technical & Telecom Solutions",
+                logo_main: "Ruyat Alsharq Almustadamah",
+                logo_sub: "Technical & Telecom Solutions",
                 nav_home: "Home",
                 nav_services: "Services & Products",
                 nav_about: "About Us",
@@ -173,33 +181,4 @@
                 footer_address: "Saudi Arabia - Makkah - Al Utaybiyah Dist.",
                 footer_legal_title: "Commercial Data",
                 footer_cr: "Commercial Register: 7055139385",
-                footer_vat: "VAT Number: 311336294100003",
-                footer_type: "Entity Type: Limited Liability Company (One Person)",
-                footer_rights: "All Rights Reserved © 2026 - Ruyat Alsharq Almustadamah Technical & Telecommunication Solutions"
-            }
-        };
-
-        let currentLang = 'ar';
-
-        function toggleLanguage() {
-            currentLang = currentLang === 'ar' ? 'en' : 'ar';
-            const htmlRoot = document.getElementById('html-root');
-            const langBtn = document.getElementById('lang-btn');
-
-            htmlRoot.setAttribute('lang', currentLang);
-            htmlRoot.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
-            
-            langBtn.textContent = currentLang === 'ar' ? 'English' : 'العربية';
-
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                if (translations[currentLang][key]) {
-                    element.textContent = translations[currentLang][key];
-                }
-            });
-
-            document.title = translations[currentLang]['page_title'];
-        }
-    </script>
-</body>
-</html>
+                footer_vat: "VAT Number: 311336294100
