@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">رؤية الشرق - للحلول التقنية والاتصالات</title>
+    <title id="page-title">رؤية الشرق المستدامة - للحلول التقنية والاتصالات</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
             <!-- Logo Section -->
             <div class="flex items-center space-x-3 space-x-reverse">
                 <a href="index.html" class="flex items-center">
-                    <img src="logo.png" alt="رؤية الشرق" class="h-10 md:h-12 w-auto object-contain">
+                    <img src="logo.png" alt="رؤية الشرق المستدامة" class="h-10 md:h-12 w-auto object-contain">
                 </a>
             </div>
 
@@ -45,7 +45,7 @@
     <!-- Hero Section -->
     <section class="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="hero_title">رؤية الشرق للحلول التقنية والاتصالات</h1>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="hero_title">شركة رؤية الشرق المستدامة للحلول التقنية والاتصالات</h1>
             <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-8" data-i18n="hero_desc">شريكك الأمثل في البنية التحتية للشبكات، أمن المعلومات، توفير الجوالات الذكية، وشرائح البيانات المعتمدة في المملكة.</p>
             <div class="flex justify-center space-x-4 space-x-reverse">
                 <a href="services.html" class="bg-white text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition shadow-lg" data-i18n="hero_btn_services">استعرض خدماتنا</a>
@@ -85,11 +85,33 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8 mt-16">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-sm text-gray-400" data-i18n="footer_rights">جميع حقوق الطبع والنشر محفوظة © 2026 - رؤية الشرق للحلول التقنية والاتصالات</p>
-            <p class="text-sm text-blue-400 mt-4 md:mt-0 font-medium">Design by Hussein Fawzy</p>
+    <!-- Footer with Official Data & Contact Info -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6 mt-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <!-- Company Info -->
+            <div>
+                <h3 class="text-lg font-bold text-blue-400 mb-3" data-i18n="footer_about_title">شركة رؤية الشرق المستدامة</h3>
+                <p class="text-gray-400 text-sm leading-relaxed" data-i18n="footer_about_desc">شريكك المعتمد لتقديم حلول الاتصالات، البنية التحتية، الجوالات، وشرائح البيانات في المملكة العربية السعودية.</p>
+            </div>
+            <!-- Contact Details -->
+            <div>
+                <h3 class="text-lg font-bold text-blue-400 mb-3" data-i18n="footer_contact_title">معلومات التواصل</h3>
+                <p class="text-gray-400 text-sm mb-2">📍 <span data-i18n="footer_address">المملكة العربية السعودية - مكة المكرمة - حي العتيبية</span>[cite: 10]</p>
+                <p class="text-gray-400 text-sm mb-2">📞 <a href="tel:+966544694489" dir="ltr" class="hover:text-white">+966 54 469 4489</a></p>
+                <p class="text-gray-400 text-sm">✉️ <a href="mailto:info@ruyatalsharq.com" class="hover:text-white">info@ruyatalsharq.com</a></p>
+            </div>
+            <!-- Legal & Commercial Info -->
+            <div>
+                <h3 class="text-lg font-bold text-blue-400 mb-3" data-i18n="footer_legal_title">البيانات التجارية</h3>
+                <p class="text-gray-400 text-sm mb-2" data-i18n="footer_cr">السجل التجاري / الرقم الوطني: 7055139385[cite: 8, 9]</p>
+                <p class="text-gray-400 text-sm" data-i18n="footer_type">نوع الكيان: شركة ذات مسؤولية محدودة (شخص واحد)[cite: 8, 9]</p>
+            </div>
+        </div>
+
+        <!-- Bottom Bar: Copyright & Author Signature -->
+        <div class="max-w-7xl mx-auto px-4 pt-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+            <p data-i18n="footer_rights">جميع حقوق الطبع والنشر محفوظة © 2026 - شركة رؤية الشرق المستدامة للحلول التقنية والاتصالات</p>
+            <p class="text-blue-400 mt-4 md:mt-0 font-medium">Design by Hussein Fawzy</p>
         </div>
     </footer>
 
@@ -97,12 +119,12 @@
     <script>
         const translations = {
             ar: {
-                page_title: "رؤية الشرق - للحلول التقنية والاتصالات",
+                page_title: "شركة رؤية الشرق المستدامة - للحلول التقنية والاتصالات",
                 nav_home: "الرئيسية",
                 nav_services: "خدماتنا والمنتجات",
                 nav_about: "من نحن",
                 nav_contact: "تواصل معنا",
-                hero_title: "رؤية الشرق للحلول التقنية والاتصالات",
+                hero_title: "شركة رؤية الشرق المستدامة للحلول التقنية والاتصالات",
                 hero_desc: "شريكك الأمثل في البنية التحتية للشبكات، أمن المعلومات، توفير الجوالات الذكية، وشرائح البيانات المعتمدة في المملكة.",
                 hero_btn_services: "استعرض خدماتنا",
                 hero_btn_contact: "تواصل معنا",
@@ -115,15 +137,22 @@
                 card3_title: "شرائح الاتصالات والبيانات",
                 card3_desc: "باقات STC، موبايلي، وزين للأعمال والأفراد في المملكة.",
                 read_more: "المزيد ←",
-                footer_rights: "جميع حقوق الطبع والنشر محفوظة © 2026 - رؤية الشرق للحلول التقنية والاتصالات"
+                footer_about_title: "شركة رؤية الشرق المستدامة",
+                footer_about_desc: "شريكك المعتمد لتقديم حلول الاتصالات، البنية التحتية، الجوالات، وشرائح البيانات في المملكة العربية السعودية.",
+                footer_contact_title: "معلومات التواصل",
+                footer_address: "المملكة العربية السعودية - مكة المكرمة - حي العتيبية",
+                footer_legal_title: "البيانات التجارية",
+                footer_cr: "السجل التجاري / الرقم الوطني: 7055139385",
+                footer_type: "نوع الكيان: شركة ذات مسؤولية محدودة (شخص واحد)",
+                footer_rights: "جميع حقوق الطبع والنشر محفوظة © 2026 - شركة رؤية الشرق المستدامة للحلول التقنية والاتصالات"
             },
             en: {
-                page_title: "Ruyat Alsharq - Technical & Telecommunication Solutions",
+                page_title: "Ruyat Alsharq Almustadamah - Technical & Telecom Solutions",
                 nav_home: "Home",
                 nav_services: "Services & Products",
                 nav_about: "About Us",
                 nav_contact: "Contact Us",
-                hero_title: "Ruyat Alsharq Technical & Telecom Solutions",
+                hero_title: "Ruyat Alsharq Almustadamah Technical & Telecom Solutions",
                 hero_desc: "Your ideal partner in network infrastructure, information security, smart mobile devices, and certified data SIM cards in KSA.",
                 hero_btn_services: "Explore Services",
                 hero_btn_contact: "Contact Us",
@@ -136,7 +165,14 @@
                 card3_title: "Telecom & Data SIMs",
                 card3_desc: "STC, Mobily, and Zain business and individual packages in KSA.",
                 read_more: "Read More →",
-                footer_rights: "All Rights Reserved © 2026 - Ruyat Alsharq Technical & Telecommunication Solutions"
+                footer_about_title: "Ruyat Alsharq Almustadamah",
+                footer_about_desc: "Your certified partner for telecom solutions, infrastructure, smartphones, and data SIMs in Saudi Arabia.",
+                footer_contact_title: "Contact Information",
+                footer_address: "Saudi Arabia - Makkah - Al Utaybiyah Dist.",
+                footer_legal_title: "Commercial Data",
+                footer_cr: "Commercial Register / National No.: 7055139385",
+                footer_type: "Entity Type: Limited Liability Company (One Person)",
+                footer_rights: "All Rights Reserved © 2026 - Ruyat Alsharq Almustadamah Technical & Telecommunication Solutions"
             }
         };
 
@@ -150,17 +186,4 @@
             htmlRoot.setAttribute('lang', currentLang);
             htmlRoot.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
             
-            langBtn.textContent = currentLang === 'ar' ? 'English' : 'العربية';
-
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                if (translations[currentLang][key]) {
-                    element.textContent = translations[currentLang][key];
-                }
-            });
-
-            document.title = translations[currentLang]['page_title'];
-        }
-    </script>
-</body>
-</html>
+            langBtn.textContent = currentLang
