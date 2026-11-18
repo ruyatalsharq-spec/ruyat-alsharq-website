@@ -181,4 +181,33 @@
                 footer_address: "Saudi Arabia - Makkah - Al Utaybiyah Dist.",
                 footer_legal_title: "Commercial Data",
                 footer_cr: "Commercial Register: 7055139385",
-                footer_vat: "VAT Number: 311336294100
+                footer_vat: "VAT Number: 311336294100003",
+                footer_type: "Entity Type: Limited Liability Company (One Person)",
+                footer_rights: "All Rights Reserved © 2026 - Ruyat Alsharq Almustadamah Technical & Telecommunication Solutions"
+            }
+        };
+
+        let currentLang = 'ar';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            const htmlRoot = document.getElementById('html-root');
+            const langBtn = document.getElementById('lang-btn');
+
+            htmlRoot.setAttribute('lang', currentLang);
+            htmlRoot.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
+            
+            langBtn.textContent = currentLang === 'ar' ? 'English' : 'العربية';
+
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    element.textContent = translations[currentLang][key];
+                }
+            });
+
+            document.title = translations[currentLang]['page_title'];
+        }
+    </script>
+</body>
+</html>
