@@ -16,13 +16,11 @@
     <!-- Header / Navbar -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            
+            <!-- Logo Section (Properly sized logo.png) -->
             <div class="flex items-center space-x-3 space-x-reverse">
-                <a href="index.html" class="flex items-center space-x-2 space-x-reverse">
-                    <div class="bg-blue-900 text-white font-bold text-lg w-10 h-10 rounded-xl flex items-center justify-center shadow-md">ر</div>
-                    <div>
-                        <span class="font-bold text-blue-900 text-base md:text-lg block leading-tight" data-i18n="logo_main">رؤية الشرق المستدامة</span>
-                        <span class="text-xs text-gray-500 block" data-i18n="logo_sub">للحلول التقنية والاتصالات</span>
-                    </div>
+                <a href="index.html" class="flex items-center">
+                    <img src="logo.png" alt="شركة رؤية الشرق المستدامة" class="h-10 md:h-12 w-auto object-contain">
                 </a>
             </div>
 
@@ -36,7 +34,7 @@
                 <button onclick="toggleLanguage()" id="lang-btn" class="bg-gray-200 text-gray-800 px-3 py-1.5 rounded-lg text-sm font-bold hover:bg-gray-300 transition">
                     English
                 </button>
-                <a href="contact.html" class="bg-blue-900 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-800 transition" data-i18n="nav_contact">تواصل معنا</a>
+                <a href="contact.html" class="bg-blue-900 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-800 transition" data-i18n="nav_contact">اتصل بنا</a>
             </div>
         </div>
     </header>
@@ -97,12 +95,10 @@
         const translations = {
             ar: {
                 page_title: "من نحن - شركة رؤية الشرق المستدامة",
-                logo_main: "رؤية الشرق المستدامة",
-                logo_sub: "للحلول التقنية والاتصالات",
                 nav_home: "الرئيسية",
                 nav_services: "خدماتنا والمنتجات",
                 nav_about: "من نحن",
-                nav_contact: "تواصل معنا",
+                nav_contact: "اتصل بنا",
                 about_heading: "من نحن",
                 about_subheading: "نتيح أحدث حلول التقنية والاتصالات وفق أعلى المعايير لخدمة القطاعين المؤسسي والفردي في المملكة.",
                 vision_title: "رؤيتنا وهدفنا",
@@ -123,8 +119,6 @@
             },
             en: {
                 page_title: "About Us - Ruyat Alsharq Almustadamah",
-                logo_main: "Ruyat Alsharq Almustadamah",
-                logo_sub: "Technical & Telecom Solutions",
                 nav_home: "Home",
                 nav_services: "Services & Products",
                 nav_about: "About Us",
