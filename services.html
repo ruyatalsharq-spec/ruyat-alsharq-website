@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">رؤية الشرق - للحلول التقنية والاتصالات</title>
+    <title id="page-title">المنتجات والخدمات - شركة رؤية الشرق المستدامة</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
@@ -14,133 +14,409 @@
 <body class="bg-gray-50 text-gray-800">
 
     <!-- Header / Navbar -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center gap-3">
             
             <!-- Logo Section -->
-            <div class="flex items-center space-x-3 space-x-reverse">
+            <div class="flex items-center shrink-0">
                 <a href="index.html" class="flex items-center">
-                    <img src="logo.png" alt="رؤية الشرق" class="h-10 md:h-12 w-auto object-contain">
+                    <img src="logo.png" alt="شركة رؤية الشرق المستدامة" class="h-10 md:h-12 w-auto object-contain">
                 </a>
             </div>
 
             <!-- Navigation Links -->
             <nav class="hidden md:flex space-x-6 space-x-reverse font-semibold">
-                <a href="index.html" class="text-blue-900 border-b-2 border-blue-900 pb-1" data-i18n="nav_home">الرئيسية</a>
-                <a href="services.html" class="text-gray-600 hover:text-blue-900 transition" data-i18n="nav_services">خدماتنا والمنتجات</a>
+                <a href="index.html" class="text-gray-600 hover:text-blue-900 transition" data-i18n="nav_home">الرئيسية</a>
+                <a href="services.html" class="text-blue-900 border-b-2 border-blue-900 pb-1" data-i18n="nav_services">المنتجات والخدمات</a>
                 <a href="about.html" class="text-gray-600 hover:text-blue-900 transition" data-i18n="nav_about">من نحن</a>
             </nav>
 
-            <!-- Actions (Language Switcher & Contact Button) -->
-            <div class="flex items-center space-x-3 space-x-reverse">
-                <!-- Language Switcher Button -->
+            <!-- Actions: Quote Basket, Language Switcher & Contact -->
+            <div class="flex items-center space-x-2 md:space-x-3 space-x-reverse shrink-0">
+                <button onclick="toggleCart()" class="relative bg-blue-50 text-blue-900 border border-blue-200 px-3 py-1.5 rounded-lg text-sm font-bold hover:bg-blue-100 transition flex items-center gap-1.5">
+                    <span>📋</span>
+                    <span data-i18n="quote_basket">قائمة التسعير</span>
+                    <span id="cart-count" class="bg-blue-900 text-white text-xs px-2 py-0.5 rounded-full">0</span>
+                </button>
+
                 <button onclick="toggleLanguage()" id="lang-btn" class="bg-gray-200 text-gray-800 px-3 py-1.5 rounded-lg text-sm font-bold hover:bg-gray-300 transition">
                     English
                 </button>
-                <a href="contact.html" class="bg-blue-900 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-800 transition" data-i18n="nav_contact">تواصل معنا</a>
+
+                <a href="contact.html" class="hidden sm:inline-block bg-blue-900 text-white px-4 py-1.5 rounded-lg text-sm font-medium hover:bg-blue-800 transition" data-i18n="nav_contact">اتصل بنا</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20">
+    <!-- Page Banner -->
+    <section class="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="hero_title">رؤية الشرق للحلول التقنية والاتصالات</h1>
-            <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-8" data-i18n="hero_desc">شريكك الأمثل في البنية التحتية للشبكات، أمن المعلومات، توفير الجوالات الذكية، وشرائح البيانات المعتمدة في المملكة.</p>
-            <div class="flex justify-center space-x-4 space-x-reverse">
-                <a href="services.html" class="bg-white text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition shadow-lg" data-i18n="hero_btn_services">استعرض خدماتنا</a>
-                <a href="contact.html" class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-900 transition" data-i18n="hero_btn_contact">تواصل معنا</a>
-            </div>
+            <h1 class="text-3xl md:text-4xl font-bold mb-3" data-i18n="store_title">كتالوج المنتجات وحلول الأعمال</h1>
+            <p class="text-blue-100 max-w-2xl mx-auto text-sm md:text-base" data-i18n="store_sub">تصفح التصنيفات وأضف الأجهزة أو الباقات المطلوبة إلى قائمة التسعير للحصول على عرض سعر رسمي ومخصص.</p>
         </div>
     </section>
 
-    <!-- Quick Services Preview -->
-    <main class="max-w-7xl mx-auto px-4 py-16">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-blue-900 mb-3" data-i18n="sec_title">ماذا نقدم؟</h2>
-            <p class="text-gray-600" data-i18n="sec_desc">نقدم حلولاً متكاملة للقطاعين المؤسسي والفردي بأعلى معايير الجودة.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center">
-                <div class="text-blue-900 text-3xl mb-4 font-bold">🌐</div>
-                <h3 class="text-xl font-bold text-blue-900 mb-2" data-i18n="card1_title">البنية التحتية والشبكات</h3>
-                <p class="text-gray-600 text-sm mb-4" data-i18n="card1_desc">شبكات الألياف البصرية وأنظمة الجدران النارية وأمن المعلومات.</p>
-                <a href="services.html" class="text-blue-900 font-semibold text-sm hover:underline" data-i18n="read_more">المزيد ←</a>
+    <!-- Main Catalog Section -->
+    <main class="max-w-7xl mx-auto px-4 py-10">
+        
+        <!-- Filter & Search Bar -->
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-8">
+            <!-- Category Tabs -->
+            <div id="category-tabs" class="flex flex-wrap gap-2">
+                <button onclick="setCategory('all')" data-cat="all" class="cat-btn bg-blue-900 text-white px-4 py-2 rounded-xl text-sm font-bold transition" data-i18n="cat_all">الكل</button>
+                <button onclick="setCategory('sims')" data-cat="sims" class="cat-btn bg-white text-gray-700 border border-gray-200 px-4 py-2 rounded-xl text-sm font-semibold hover:border-blue-900 transition" data-i18n="cat_sims">الشرائح وباقات الشركات</button>
+                <button onclick="setCategory('mobiles')" data-cat="mobiles" class="cat-btn bg-white text-gray-700 border border-gray-200 px-4 py-2 rounded-xl text-sm font-semibold hover:border-blue-900 transition" data-i18n="cat_mobiles">الجوالات والأجهزة الذكية</button>
+                <button onclick="setCategory('networks')" data-cat="networks" class="cat-btn bg-white text-gray-700 border border-gray-200 px-4 py-2 rounded-xl text-sm font-semibold hover:border-blue-900 transition" data-i18n="cat_networks">الشبكات والبنية التحتية</button>
+                <button onclick="setCategory('accessories')" data-cat="accessories" class="cat-btn bg-white text-gray-700 border border-gray-200 px-4 py-2 rounded-xl text-sm font-semibold hover:border-blue-900 transition" data-i18n="cat_accessories">الإكسسوارات والملحقات</button>
             </div>
 
-            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center">
-                <div class="text-blue-900 text-3xl mb-4 font-bold">📱</div>
-                <h3 class="text-xl font-bold text-blue-900 mb-2" data-i18n="card2_title">الجوالات الذكية</h3>
-                <p class="text-gray-600 text-sm mb-4" data-i18n="card2_desc">أحدث إصدارات أيفون، سامسونج، وشاومي بضمان معتمد.</p>
-                <a href="services.html" class="text-blue-900 font-semibold text-sm hover:underline" data-i18n="read_more">المزيد ←</a>
-            </div>
-
-            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center">
-                <div class="text-blue-900 text-3xl mb-4 font-bold">📶</div>
-                <h3 class="text-xl font-bold text-blue-900 mb-2" data-i18n="card3_title">شرائح الاتصالات والبيانات</h3>
-                <p class="text-gray-600 text-sm mb-4" data-i18n="card3_desc">باقات STC، موبايلي، وزين للأعمال والأفراد في المملكة.</p>
-                <a href="services.html" class="text-blue-900 font-semibold text-sm hover:underline" data-i18n="read_more">المزيد ←</a>
+            <!-- Search Input -->
+            <div class="w-full lg:w-80">
+                <input id="search-input" oninput="renderProducts()" type="text" data-i18n-placeholder="search_placeholder" placeholder="ابحث عن منتج، شريحة، أو حل تقني..." class="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-900 text-sm">
             </div>
         </div>
+
+        <!-- Products Grid -->
+        <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8 mt-16">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-sm text-gray-400" data-i18n="footer_rights">جميع حقوق الطبع والنشر محفوظة © 2026 - رؤية الشرق للحلول التقنية والاتصالات</p>
-            <p class="text-sm text-blue-400 mt-4 md:mt-0 font-medium">Design by Hussein Fawzy</p>
+    <!-- Quote Basket Drawer (Modal) -->
+    <div id="cart-drawer" class="fixed inset-0 bg-black/50 z-50 hidden justify-end">
+        <div class="bg-white w-full max-w-md h-full p-6 flex flex-col justify-between overflow-y-auto shadow-2xl">
+            <div>
+                <div class="flex justify-between items-center border-b pb-4 mb-4">
+                    <div>
+                        <h2 class="text-xl font-bold text-blue-900" data-i18n="drawer_title">قائمة طلب عرض السعر</h2>
+                        <p class="text-xs text-gray-500 mt-0.5" data-i18n="drawer_sub">حدد الكميات المطلوبة وأرسل طلبك للتسعير المباشر</p>
+                    </div>
+                    <button onclick="toggleCart()" class="text-gray-500 hover:text-red-600 text-xl font-bold px-2">✕</button>
+                </div>
+
+                <div id="cart-items" class="space-y-3 mb-6"></div>
+            </div>
+
+            <!-- Quote Submission Form -->
+            <div class="border-t pt-4">
+                <form action="https://formspree.io/f/xbgoybrd" method="POST" class="space-y-3">
+                    <input type="text" name="customer_name" required data-i18n-placeholder="form_name" placeholder="الاسم الكامل / اسم الشركة" class="w-full px-3.5 py-2.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                    <input type="tel" name="customer_phone" required data-i18n-placeholder="form_phone" placeholder="رقم الجوال (05XXXXXXXX)" class="w-full px-3.5 py-2.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                    <input type="email" name="customer_email" data-i18n-placeholder="form_email" placeholder="البريد الإلكتروني (اختياري)" class="w-full px-3.5 py-2.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-900">
+                    <textarea name="notes" rows="2" data-i18n-placeholder="form_notes" placeholder="ملاحظات إضافية (المدينة، مواصفات خاصة...)" class="w-full px-3.5 py-2 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-900"></textarea>
+                    
+                    <!-- Hidden field containing selected items -->
+                    <input type="hidden" name="quote_items" id="quote-items-input">
+
+                    <button type="submit" id="submit-quote-btn" class="w-full bg-blue-900 text-white py-3 rounded-xl font-bold hover:bg-blue-800 transition shadow-md" data-i18n="submit_quote">
+                        إرسال طلب عرض السعر
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Unified across all pages) -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6 mt-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <h3 class="text-lg font-bold text-blue-400 mb-3" data-i18n="footer_about_title">شركة رؤية الشرق المستدامة</h3>
+                <p class="text-gray-400 text-sm leading-relaxed" data-i18n="footer_about_desc">شريكك المعتمد لتقديم حلول الاتصالات، البنية التحتية، الجوالات، وشرائح البيانات في المملكة العربية السعودية.</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-blue-400 mb-3" data-i18n="footer_contact_title">معلومات التواصل</h3>
+                <p class="text-gray-400 text-sm mb-2">📍 <span data-i18n="footer_address">المملكة العربية السعودية - مكة المكرمة - حي العتيبية</span></p>
+                <p class="text-gray-400 text-sm mb-2">📞 <a href="tel:+966544694489" dir="ltr" class="hover:text-white">+966 54 469 4489</a></p>
+                <p class="text-gray-400 text-sm">✉️ <a href="mailto:info@ruyatalsharq.com" class="hover:text-white">info@ruyatalsharq.com</a></p>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-blue-400 mb-3" data-i18n="footer_legal_title">البيانات التجارية</h3>
+                <p class="text-gray-400 text-sm mb-1.5" data-i18n="footer_cr">السجل التجاري: 7055139385</p>
+                <p class="text-gray-400 text-sm mb-1.5" data-i18n="footer_vat" dir="ltr">رقم القيمة المضافة: 311336294100003</p>
+                <p class="text-gray-400 text-sm" data-i18n="footer_type">نوع الكيان: شركة ذات مسؤولية محدودة (شخص واحد)</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 pt-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+            <p data-i18n="footer_rights">جميع حقوق الطبع والنشر محفوظة © 2026 - شركة رؤية الشرق المستدامة للحلول التقنية والاتصالات</p>
+            <p class="text-blue-400 mt-4 md:mt-0 font-medium">Design by Hussein Fawzy</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Language Switcher -->
+    <!-- JavaScript -->
     <script>
+        // قائمة المنتجات والخدمات (يمكنك التعديل والإضافة هنا بسهولة مستقبلاً)
+        const products = [
+            {
+                id: 1,
+                cat: 'sims',
+                nameAr: 'شرائح بيانات أعمال 5G (STC / موبايلي / زين)',
+                nameEn: 'Business 5G Data SIMs (STC / Mobily / Zain)',
+                descAr: 'باقات إنترنت مفتوحة ومحددة للمنشآت والموظفين مع فوترة موحدة.',
+                descEn: 'Unlimited & capped data plans for businesses and teams with unified billing.',
+                badgeAr: 'باقات الشركات',
+                badgeEn: 'Corporate Plans',
+                icon: '📶'
+            },
+            {
+                id: 2,
+                cat: 'sims',
+                nameAr: 'شرائح اتصال ومكالمات موحدة للمنشآت',
+                nameEn: 'Corporate Voice & Call Bundles',
+                descAr: 'دقائق محلية ودولية وباقات تواصل داخلية لفريق العمل.',
+                descEn: 'Local & international minutes and internal team calling bundles.',
+                badgeAr: 'الأكثر طلباً',
+                badgeEn: 'Most Requested',
+                icon: '📡'
+            },
+            {
+                id: 3,
+                cat: 'mobiles',
+                nameAr: 'أجهزة آيفون (iPhone) - أحدث الإصدارات',
+                nameEn: 'Apple iPhone - Latest Models',
+                descAr: 'توفير كافة السعات والألوان بضمان الوكيل المعتمد للأفراد والشركات.',
+                descEn: 'All capacities and colors with authorized KSA warranty for individuals & B2B.',
+                badgeAr: 'ضمان الوكيل',
+                badgeEn: 'Authorized Warranty',
+                icon: '📱'
+            },
+            {
+                id: 4,
+                cat: 'mobiles',
+                nameAr: 'أجهزة سامسونج جالكسي (Samsung Galaxy)',
+                nameEn: 'Samsung Galaxy Smartphones & Tablets',
+                descAr: 'سلسلة S و A والأجهزة اللوحية لتجهيز فرق العمل والمبيعات.',
+                descEn: 'Galaxy S, A series, and tablets for field teams and enterprise use.',
+                badgeAr: 'متوفر بالكميات',
+                badgeEn: 'Bulk Available',
+                icon: '📲'
+            },
+            {
+                id: 5,
+                cat: 'networks',
+                nameAr: 'راوترات 5G مكتبية ومؤسسية عالية الأداء',
+                nameEn: 'Enterprise & Office 5G Routers',
+                descAr: 'تغطية لاسلكية مستقرة وسرعات عالية للمكاتب والفروع.',
+                descEn: 'Stable wireless coverage and high speeds for offices and branches.',
+                badgeAr: 'حلول الشبكات',
+                badgeEn: 'Networking',
+                icon: '🌐'
+            },
+            {
+                id: 6,
+                cat: 'networks',
+                nameAr: 'أنظمة الجدران النارية وسويتشات الشبكات',
+                nameEn: 'Firewalls & Managed Network Switches',
+                descAr: 'توريد وتركيب حلول أمن المعلومات والبنية التحتية للشبكات.',
+                descEn: 'Supply and setup of network security firewalls and switching infrastructure.',
+                badgeAr: 'بنية تحتية',
+                badgeEn: 'Infrastructure',
+                icon: '🛡️'
+            },
+            {
+                id: 7,
+                cat: 'networks',
+                nameAr: 'تمديد شبكات الألياف البصرية ونقاط الوصول',
+                nameEn: 'Fiber Optic Cabling & Access Points',
+                descAr: 'تأسيس وتجهيز الشبكات الداخلية للمباني والمستودعات.',
+                descEn: 'Structured cabling and Wi-Fi coverage for buildings and warehouses.',
+                badgeAr: 'مشاريع',
+                badgeEn: 'Projects',
+                icon: '🔌'
+            },
+            {
+                id: 8,
+                cat: 'accessories',
+                nameAr: 'ملحقات الجوالات والشواحن الأصلية المعتمدة',
+                nameEn: 'Certified Mobile Chargers & Accessories',
+                descAr: 'شواحن سريعة، كابلات، وحمايات شاشة أصلية بأسعار الجملة والقطاعي.',
+                descEn: 'Fast chargers, cables, and screen protectors for retail and wholesale.',
+                badgeAr: 'ملحقات',
+                badgeEn: 'Accessories',
+                icon: '🔋'
+            }
+        ];
+
         const translations = {
             ar: {
-                page_title: "رؤية الشرق - للحلول التقنية والاتصالات",
+                page_title: "المنتجات والخدمات - شركة رؤية الشرق المستدامة",
                 nav_home: "الرئيسية",
-                nav_services: "خدماتنا والمنتجات",
+                nav_services: "المنتجات والخدمات",
                 nav_about: "من نحن",
-                nav_contact: "تواصل معنا",
-                hero_title: "رؤية الشرق للحلول التقنية والاتصالات",
-                hero_desc: "شريكك الأمثل في البنية التحتية للشبكات، أمن المعلومات، توفير الجوالات الذكية، وشرائح البيانات المعتمدة في المملكة.",
-                hero_btn_services: "استعرض خدماتنا",
-                hero_btn_contact: "تواصل معنا",
-                sec_title: "ماذا نقدم؟",
-                sec_desc: "نقدم حلولاً متكاملة للقطاعين المؤسسي والفردي بأعلى معايير الجودة.",
-                card1_title: "البنية التحتية والشبكات",
-                card1_desc: "شبكات الألياف البصرية وأنظمة الجدران النارية وأمن المعلومات.",
-                card2_title: "الجوالات الذكية",
-                card2_desc: "أحدث إصدارات أيفون، سامسونج، وشاومي بضمان معتمد.",
-                card3_title: "شرائح الاتصالات والبيانات",
-                card3_desc: "باقات STC، موبايلي، وزين للأعمال والأفراد في المملكة.",
-                read_more: "المزيد ←",
-                footer_rights: "جميع حقوق الطبع والنشر محفوظة © 2026 - رؤية الشرق للحلول التقنية والاتصالات"
+                nav_contact: "اتصل بنا",
+                quote_basket: "قائمة التسعير",
+                store_title: "كتالوج المنتجات وحلول الأعمال",
+                store_sub: "تصفح التصنيفات وأضف الأجهزة أو الباقات المطلوبة إلى قائمة التسعير للحصول على عرض سعر رسمي ومخصص.",
+                cat_all: "الكل",
+                cat_sims: "الشرائح وباقات الشركات",
+                cat_mobiles: "الجوالات والأجهزة الذكية",
+                cat_networks: "الشبكات والبنية التحتية",
+                cat_accessories: "الإكسسوارات والملحقات",
+                search_placeholder: "ابحث عن منتج، شريحة، أو حل تقني...",
+                drawer_title: "قائمة طلب عرض السعر",
+                drawer_sub: "حدد الكميات المطلوبة وأرسل طلبك للتسعير المباشر",
+                form_name: "الاسم الكامل / اسم الشركة",
+                form_phone: "رقم الجوال (05XXXXXXXX)",
+                form_email: "البريد الإلكتروني (اختياري)",
+                form_notes: "ملاحظات إضافية (المدينة، مواصفات خاصة...)",
+                submit_quote: "إرسال طلب عرض السعر",
+                footer_about_title: "شركة رؤية الشرق المستدامة",
+                footer_about_desc: "شريكك المعتمد لتقديم حلول الاتصالات، البنية التحتية، الجوالات، وشرائح البيانات في المملكة العربية السعودية.",
+                footer_contact_title: "معلومات التواصل",
+                footer_address: "المملكة العربية السعودية - مكة المكرمة - حي العتيبية",
+                footer_legal_title: "البيانات التجارية",
+                footer_cr: "السجل التجاري: 7055139385",
+                footer_vat: "رقم القيمة المضافة: 311336294100003",
+                footer_type: "نوع الكيان: شركة ذات مسؤولية محدودة (شخص واحد)",
+                footer_rights: "جميع حقوق الطبع والنشر محفوظة © 2026 - شركة رؤية الشرق المستدامة للحلول التقنية والاتصالات"
             },
             en: {
-                page_title: "Ruyat Alsharq - Technical & Telecommunication Solutions",
+                page_title: "Products & Services - Ruyat Alsharq Almustadamah",
                 nav_home: "Home",
-                nav_services: "Services & Products",
+                nav_services: "Products & Services",
                 nav_about: "About Us",
                 nav_contact: "Contact Us",
-                hero_title: "Ruyat Alsharq Technical & Telecom Solutions",
-                hero_desc: "Your ideal partner in network infrastructure, information security, smart mobile devices, and certified data SIM cards in KSA.",
-                hero_btn_services: "Explore Services",
-                hero_btn_contact: "Contact Us",
-                sec_title: "What We Offer",
-                sec_desc: "We provide integrated solutions for both corporate and individual sectors with the highest quality standards.",
-                card1_title: "Infrastructure & Networks",
-                card1_desc: "Fiber optic networks, firewall systems, and information security.",
-                card2_title: "Smart Mobile Devices",
-                card2_desc: "Latest iPhone, Samsung, and Xiaomi releases with certified warranty.",
-                card3_title: "Telecom & Data SIMs",
-                card3_desc: "STC, Mobily, and Zain business and individual packages in KSA.",
-                read_more: "Read More →",
-                footer_rights: "All Rights Reserved © 2026 - Ruyat Alsharq Technical & Telecommunication Solutions"
+                quote_basket: "Quote List",
+                store_title: "Products & Business Solutions Catalog",
+                store_sub: "Browse categories and add required devices or plans to your quote list to receive an official customized quotation.",
+                cat_all: "All",
+                cat_sims: "SIMs & Corporate Plans",
+                cat_mobiles: "Smartphones & Devices",
+                cat_networks: "Networks & Infrastructure",
+                cat_accessories: "Accessories",
+                search_placeholder: "Search for a product, SIM plan, or solution...",
+                drawer_title: "Request for Quotation (RFQ)",
+                drawer_sub: "Specify required quantities and submit for direct pricing",
+                form_name: "Full Name / Company Name",
+                form_phone: "Mobile Number (05XXXXXXXX)",
+                form_email: "Email Address (Optional)",
+                form_notes: "Additional notes (City, specs...)",
+                submit_quote: "Submit Quote Request",
+                footer_about_title: "Ruyat Alsharq Almustadamah",
+                footer_about_desc: "Your certified partner for telecom solutions, infrastructure, smartphones, and data SIMs in Saudi Arabia.",
+                footer_contact_title: "Contact Information",
+                footer_address: "Saudi Arabia - Makkah - Al Utaybiyah Dist.",
+                footer_legal_title: "Commercial Data",
+                footer_cr: "Commercial Register: 7055139385",
+                footer_vat: "VAT Number: 311336294100003",
+                footer_type: "Entity Type: Limited Liability Company (One Person)",
+                footer_rights: "All Rights Reserved © 2026 - Ruyat Alsharq Almustadamah Technical & Telecommunication Solutions"
             }
         };
 
+        let activeCat = 'all';
         let currentLang = 'ar';
+        let quoteCart = [];
+
+        function setCategory(cat) {
+            activeCat = cat;
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                if (btn.dataset.cat === cat) {
+                    btn.className = 'cat-btn bg-blue-900 text-white px-4 py-2 rounded-xl text-sm font-bold transition';
+                } else {
+                    btn.className = 'cat-btn bg-white text-gray-700 border border-gray-200 px-4 py-2 rounded-xl text-sm font-semibold hover:border-blue-900 transition';
+                }
+            });
+            renderProducts();
+        }
+
+        function renderProducts() {
+            const q = document.getElementById('search-input').value.trim().toLowerCase();
+            const grid = document.getElementById('products-grid');
+            const filtered = products.filter(p => {
+                const matchCat = activeCat === 'all' || p.cat === activeCat;
+                const name = (currentLang === 'ar' ? p.nameAr : p.nameEn).toLowerCase();
+                const desc = (currentLang === 'ar' ? p.descAr : p.descEn).toLowerCase();
+                return matchCat && (!q || name.includes(q) || desc.includes(q));
+            });
+
+            if (!filtered.length) {
+                grid.innerHTML = `<div class="col-span-full text-center py-12 text-gray-500">${currentLang === 'ar' ? 'لا توجد منتجات مطابقة لبحثك حالياً.' : 'No matching products found.'}</div>`;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(p => {
+                const inCart = quoteCart.find(c => c.id === p.id);
+                return `
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 flex flex-col justify-between hover:shadow-md transition">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-3xl bg-blue-50 w-12 h-12 rounded-xl flex items-center justify-center">${p.icon}</span>
+                            <span class="text-xs bg-blue-50 text-blue-900 px-2.5 py-1 rounded-full font-semibold">${currentLang === 'ar' ? p.badgeAr : p.badgeEn}</span>
+                        </div>
+                        <h3 class="font-bold text-gray-800 text-base mb-2 leading-snug">${currentLang === 'ar' ? p.nameAr : p.nameEn}</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed mb-4">${currentLang === 'ar' ? p.descAr : p.descEn}</p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between gap-2">
+                        <span class="text-xs font-bold text-blue-900">${currentLang === 'ar' ? 'تسعير مخصص' : 'Custom Quote'}</span>
+                        <button onclick="addToQuote(${p.id})" class="${inCart ? 'bg-green-700 hover:bg-green-800' : 'bg-blue-900 hover:bg-blue-800'} text-white px-3.5 py-2 rounded-xl text-xs font-bold transition">
+                            ${inCart
+                                ? (currentLang === 'ar' ? `مضاف (${inCart.qty}) +` : `Added (${inCart.qty}) +`)
+                                : (currentLang === 'ar' ? 'اطلب عرض سعر' : 'Request Quote')}
+                        </button>
+                    </div>
+                </div>
+            `}).join('');
+        }
+
+        function addToQuote(id) {
+            const item = products.find(p => p.id === id);
+            const existing = quoteCart.find(c => c.id === id);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                quoteCart.push({ ...item, qty: 1 });
+            }
+            updateCartUI();
+            renderProducts();
+        }
+
+        function changeQty(id, delta) {
+            const idx = quoteCart.findIndex(c => c.id === id);
+            if (idx === -1) return;
+            quoteCart[idx].qty += delta;
+            if (quoteCart[idx].qty <= 0) {
+                quoteCart.splice(idx, 1);
+            }
+            updateCartUI();
+            renderProducts();
+        }
+
+        function updateCartUI() {
+            const count = quoteCart.reduce((sum, i) => sum + i.qty, 0);
+            document.getElementById('cart-count').textContent = count;
+
+            const container = document.getElementById('cart-items');
+            const submitBtn = document.getElementById('submit-quote-btn');
+
+            if (!quoteCart.length) {
+                container.innerHTML = `<p class="text-gray-500 text-sm text-center py-8 bg-gray-50 rounded-xl border border-dashed">${currentLang === 'ar' ? 'لم تقم بإضافة منتجات للتسعير بعد' : 'No items added to your quote list yet'}</p>`;
+                submitBtn.disabled = true;
+                submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            } else {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                container.innerHTML = quoteCart.map(item => `
+                    <div class="flex justify-between items-center bg-gray-50 p-3 rounded-xl border border-gray-200 gap-2">
+                        <div class="flex-1">
+                            <p class="font-bold text-sm text-gray-800">${currentLang === 'ar' ? item.nameAr : item.nameEn}</p>
+                            <p class="text-xs text-gray-500 mt-0.5">${currentLang === 'ar' ? 'الكمية المطلوبة:' : 'Qty:'} ${item.qty}</p>
+                        </div>
+                        <div class="flex items-center gap-1.5 shrink-0">
+                            <button type="button" onclick="changeQty(${item.id}, -1)" class="w-7 h-7 bg-gray-200 hover:bg-gray-300 rounded-lg font-bold text-gray-800">-</button>
+                            <span class="text-sm font-bold w-6 text-center">${item.qty}</span>
+                            <button type="button" onclick="changeQty(${item.id}, 1)" class="w-7 h-7 bg-blue-900 hover:bg-blue-800 text-white rounded-lg font-bold">+</button>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            const summary = quoteCart.map(i => `${i.nameAr} (الكمية: ${i.qty})`).join(' | ');
+            document.getElementById('quote-items-input').value = summary;
+        }
+
+        function toggleCart() {
+            const drawer = document.getElementById('cart-drawer');
+            drawer.classList.toggle('hidden');
+            drawer.classList.toggle('flex');
+        }
 
         function toggleLanguage() {
             currentLang = currentLang === 'ar' ? 'en' : 'ar';
@@ -149,18 +425,25 @@
 
             htmlRoot.setAttribute('lang', currentLang);
             htmlRoot.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
-            
             langBtn.textContent = currentLang === 'ar' ? 'English' : 'العربية';
 
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                if (translations[currentLang][key]) {
-                    element.textContent = translations[currentLang][key];
-                }
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) el.textContent = translations[currentLang][key];
+            });
+
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (translations[currentLang][key]) el.setAttribute('placeholder', translations[currentLang][key]);
             });
 
             document.title = translations[currentLang]['page_title'];
+            renderProducts();
+            updateCartUI();
         }
+
+        renderProducts();
+        updateCartUI();
     </script>
 </body>
 </html>
