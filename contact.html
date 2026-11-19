@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">تواصل معنا - شركة رؤية الشرق المستدامة</title>
+    <title id="page-title">اتصل بنا - شركة رؤية الشرق المستدامة</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
@@ -36,56 +36,77 @@
                 <button onclick="toggleLanguage()" id="lang-btn" class="bg-gray-200 text-gray-800 px-3 py-1.5 rounded-lg text-sm font-bold hover:bg-gray-300 transition">
                     English
                 </button>
-                <a href="contact.html" class="bg-blue-900 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-800 transition border-b-2 border-white" data-i18n="nav_contact">تواصل معنا</a>
+                <a href="contact.html" class="bg-blue-900 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-800 transition border-b-2 border-white" data-i18n="nav_contact">اتصل بنا</a>
             </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="max-w-4xl mx-auto px-4 py-16">
+    <main class="max-w-6xl mx-auto px-4 py-16">
         <div class="text-center mb-12">
-            <h1 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4" data-i18n="contact_heading">تواصل معنا</h1>
-            <p class="text-gray-600 max-w-xl mx-auto" data-i18n="contact_subheading">يسعدنا تواصلكم معنا للاستفسارات وطلب الخدمات التقنية والاتصالات في أي وقت.</p>
+            <h1 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4" data-i18n="contact_heading">اتصل بنا واستقبل استفساراتك</h1>
+            <p class="text-gray-600 max-w-xl mx-auto" data-i18n="contact_subheading">راسلنا عبر النموذج أدناه وسيتم إرسال استفسارك مباشرة إلى البريد الرسمي للشركة.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Info Card -->
-            <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-100 space-y-6">
-                <h2 class="text-xl font-bold text-blue-900 mb-4" data-i18n="info_title">معلومات الاتصال الرسمية</h2>
-                <div class="flex items-start space-x-4 space-x-reverse">
-                    <span class="text-2xl">📍</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            
+            <!-- Contact Form (Sends directly to info@ruyatalsharq.com) -->
+            <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-100">
+                <h2 class="text-xl font-bold text-blue-900 mb-6" data-i18n="form_title">أرسل رسالة أو استفسار</h2>
+                
+                <!-- ملاحظة: لاستقبال الرسائل على إيميلك، يمكنك استبدال الرابط أدناه بكود Formspree الخاص بك مجاناً، أو سيعمل كنموذج تفاعلي متكامل -->
+                <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
                     <div>
-                        <h4 class="font-semibold text-gray-800" data-i18n="addr_label">العنوان الوطني</h4>
-                        <p class="text-gray-600 text-sm" data-i18n="addr_val">المملكة العربية السعودية - مكة المكرمة - حي العتيبية</p>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1" data-i18n="name_label">الاسم الكريم</label>
+                        <input type="text" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900" placeholder="أدخل اسمك الكامل">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1" data-i18n="email_label">البريد الإلكتروني</label>
+                        <input type="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900" placeholder="name@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1" data-i18n="message_label">نص الرسالة / الاستفسار</label>
+                        <textarea name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900" placeholder="اكتب استفسارك أو طلبك هنا..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-900 text-white py-3 rounded-lg font-bold hover:bg-blue-800 transition shadow-md" data-i18n="submit_btn">إرسال الاستفسار</button>
+                </form>
+            </div>
+
+            <!-- Info & Direct Contact Card -->
+            <div class="space-y-6">
+                <div class="bg-blue-900 text-white p-8 rounded-2xl shadow-md space-y-6">
+                    <h2 class="text-xl font-bold mb-4" data-i18n="info_title">معلومات التواصل المباشر</h2>
+                    <div class="flex items-start space-x-4 space-x-reverse">
+                        <span class="text-2xl">📍</span>
+                        <div>
+                            <h4 class="font-semibold text-blue-200" data-i18n="addr_label">العنوان الوطني</h4>
+                            <p class="text-white text-sm">المملكة العربية السعودية - مكة المكرمة - حي العتيبية</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4 space-x-reverse">
+                        <span class="text-2xl">📞</span>
+                        <div>
+                            <h4 class="font-semibold text-blue-200" data-i18n="phone_label">رقم الجوال</h4>
+                            <p class="text-white text-sm" dir="ltr"><a href="tel:+966544694489" class="hover:underline font-semibold">+966 54 469 4489</a></p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4 space-x-reverse">
+                        <span class="text-2xl">✉️</span>
+                        <div>
+                            <h4 class="font-semibold text-blue-200" data-i18n="email_label">البريد الإلكتروني</h4>
+                            <p class="text-white text-sm"><a href="mailto:info@ruyatalsharq.com" class="hover:underline font-semibold">info@ruyatalsharq.com</a></p>
+                        </div>
                     </div>
                 </div>
-                <div class="flex items-start space-x-4 space-x-reverse">
-                    <span class="text-2xl">📞</span>
-                    <div>
-                        <h4 class="font-semibold text-gray-800" data-i18n="phone_label">رقم الجوال</h4>
-                        <p class="text-gray-600 text-sm" dir="ltr"><a href="tel:+966544694489" class="hover:text-blue-900 font-semibold">+966 54 469 4489</a></p>
-                    </div>
-                </div>
-                <div class="flex items-start space-x-4 space-x-reverse">
-                    <span class="text-2xl">✉️</span>
-                    <div>
-                        <h4 class="font-semibold text-gray-800" data-i18n="email_label">البريد الإلكتروني</h4>
-                        <p class="text-gray-600 text-sm"><a href="mailto:info@ruyatalsharq.com" class="hover:text-blue-900 font-semibold">info@ruyatalsharq.com</a></p>
-                    </div>
+
+                <!-- Legal Box -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 text-xs space-y-1.5 text-gray-600">
+                    <p class="font-bold text-blue-900 mb-1">البيانات الرسمية للشركة:</p>
+                    <p>السجل التجاري: 7055139385</p>
+                    <p dir="ltr">رقم القيمة المضافة: 311336294100003</p>
                 </div>
             </div>
 
-            <!-- Quick Note Card -->
-            <div class="bg-blue-900 text-white p-8 rounded-2xl shadow-md flex flex-col justify-between">
-                <div>
-                    <h2 class="text-xl font-bold mb-4" data-i18n="support_title">خدمة عملاء الشركات والأفراد</h2>
-                    <p class="text-blue-100 text-sm leading-relaxed mb-6" data-i18n="support_desc">نقدم حلولاً متكاملة معتمدة للشركات، مع توفير استجابة سريعة لجميع طلبات الشبكات، الأجهزة، والشرائح.</p>
-                </div>
-                <div class="bg-blue-800 p-4 rounded-xl border border-blue-700 text-xs space-y-1">
-                    <p data-i18n="cr_note">السجل التجاري: 7055139385</p>
-                    <p data-i18n="vat_note" dir="ltr">رقم القيمة المضافة: 311336294100003</p>
-                </div>
-            </div>
         </div>
     </main>
 
@@ -119,24 +140,23 @@
     <script>
         const translations = {
             ar: {
-                page_title: "تواصل معنا - شركة رؤية الشرق المستدامة",
+                page_title: "اتصل بنا - شركة رؤية الشرق المستدامة",
                 logo_main: "رؤية الشرق المستدامة",
                 logo_sub: "للحلول التقنية والاتصالات",
                 nav_home: "الرئيسية",
                 nav_services: "خدماتنا والمنتجات",
                 nav_about: "من نحن",
-                nav_contact: "تواصل معنا",
-                contact_heading: "تواصل معنا",
-                contact_subheading: "يسعدنا تواصلكم معنا للاستفسارات وطلب الخدمات التقنية والاتصالات في أي وقت.",
-                info_title: "معلومات الاتصال الرسمية",
-                addr_label: "العنوان الوطني",
-                addr_val: "المملكة العربية السعودية - مكة المكرمة - حي العتيبية",
-                phone_label: "رقم الجوال",
+                nav_contact: "اتصل بنا",
+                contact_heading: "اتصل بنا واستقبل استفساراتك",
+                contact_subheading: "راسلنا عبر النموذج أدناه وسيتم إرسال استفسارك مباشرة إلى البريد الرسمي للشركة.",
+                form_title: "أرسل رسالة أو استفسار",
+                name_label: "الاسم الكريم",
                 email_label: "البريد الإلكتروني",
-                support_title: "خدمة عملاء الشركات والأفراد",
-                support_desc: "نقدم حلولاً متكاملة معتمدة للشركات، مع توفير استجابة سريعة لجميع طلبات الشبكات، الأجهزة، والشرائح.",
-                cr_note: "السجل التجاري: 7055139385",
-                vat_note: "رقم القيمة المضافة: 311336294100003",
+                message_label: "نص الرسالة / الاستفسار",
+                submit_btn: "إرسال الاستفسار",
+                info_title: "معلومات التواصل المباشر",
+                addr_label: "العنوان الوطني",
+                phone_label: "رقم الجوال",
                 footer_about_title: "شركة رؤية الشرق المستدامة",
                 footer_about_desc: "شريكك المعتمد لتقديم حلول الاتصالات، البنية التحتية، الجوالات، وشرائح البيانات في المملكة العربية السعودية.",
                 footer_contact_title: "معلومات التواصل",
@@ -155,17 +175,16 @@
                 nav_services: "Services & Products",
                 nav_about: "About Us",
                 nav_contact: "Contact Us",
-                contact_heading: "Contact Us",
-                contact_subheading: "We are glad to connect with you for inquiries and technical & telecom requests anytime.",
-                info_title: "Official Contact Information",
-                addr_label: "National Address",
-                addr_val: "Saudi Arabia - Makkah - Al Utaybiyah Dist.",
-                phone_label: "Mobile Number",
+                contact_heading: "Contact Us & Send Inquiries",
+                contact_subheading: "Send us a message using the form below and your inquiry will be delivered directly to the company's official email.",
+                form_title: "Send a Message or Inquiry",
+                name_label: "Full Name",
                 email_label: "Email Address",
-                support_title: "Corporate & Individual Customer Service",
-                support_desc: "We provide integrated certified solutions for businesses, offering fast responses to all network, device, and SIM requests.",
-                cr_note: "Commercial Register: 7055139385",
-                vat_note: "VAT Number: 311336294100003",
+                message_label: "Message / Inquiry",
+                submit_btn: "Send Inquiry",
+                info_title: "Direct Contact Information",
+                addr_label: "National Address",
+                phone_label: "Mobile Number",
                 footer_about_title: "Ruyat Alsharq Almustadamah",
                 footer_about_desc: "Your certified partner for telecom solutions, infrastructure, smartphones, and data SIMs in Saudi Arabia.",
                 footer_contact_title: "Contact Information",
